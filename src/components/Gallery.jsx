@@ -4,6 +4,8 @@ import { GALLERYDATA } from "../SlideData.js";
 
 import React, { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 export default function Gallery() {
   const [click, clicked] = useState(false);
   const [targetImg, setTargetImg] = useState(null);
@@ -39,6 +41,9 @@ export default function Gallery() {
           <img src={targetImg} alt="" />
         </div>
       </div>
+      <Link to={"/galeri"} className="flex-center">
+        <button>Tümünü göster</button>
+      </Link>
     </div>
   );
 }

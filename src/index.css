@@ -4,9 +4,6 @@
   margin: 0;
   font-family: "Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
-html {
-  scroll-behavior: smooth;
-}
 :root {
   --activecolor: #316738;
 }
@@ -63,7 +60,7 @@ img {
   position: relative;
   top: 0px;
   z-index: 999;
-  height: 777.014px;
+  height: 600px;
   background: fixed;
   background-size: cover;
   background-color: rgb(27, 26, 26);
@@ -235,7 +232,7 @@ button:hover {
 .line-img {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2.5rem;
+  margin-bottom: 24px;
   display: block;
 }
 .title {
@@ -426,6 +423,7 @@ button:hover {
 }
 .slide-button:hover {
   background-color: #316738 !important;
+  color: #ffff !important;
 }
 .card-content {
   gap: 10px;
@@ -466,7 +464,7 @@ button:hover {
   text-align: center;
   padding-bottom: 10px;
 }
-.line::after {
+.line-bottom::after {
   content: '';
   position: absolute;
   background-image: url(./assets/wave-first.png);
@@ -477,7 +475,7 @@ button:hover {
   width: 100%;
   height: 110px;
 }
-.line::before {
+.line-top::before {
   content: '';
   position: absolute;
   background-image: url(./assets/bottom_green_wave_01.png);
@@ -490,20 +488,24 @@ button:hover {
 }
 .gallery {
   display: grid;
-  margin: 3em 0;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: 1fr;
   grid-gap: 1em;
   grid-auto-flow: dense;
+  margin-top: 24px;
 }
 @media  screen and (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
+.gallery + .flex-center {
+  margin-top: 10px;
+}
 .gallery-item {
   border-radius: 4px;
   cursor: pointer;
+  height: 100%;
 }
 .popup-image
 {
@@ -537,4 +539,122 @@ button:hover {
   transform: translate(-50%, -50%);
   width: 750px;
   object-fit: cover;
+}
+.hidden {
+  display: none;
+}
+.faq-container {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+.faq-item {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  padding: 10px;
+}
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+.faq-item > p {
+  padding-top: 10px;
+}
+.faq-header > svg {
+  width: 25px;
+  height: 25px;
+}
+.white {
+  color: white;
+}
+iframe {
+  border: none;
+}
+.contact {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  padding: 10px;
+}
+.items {
+  width: calc(50% - 10px);
+}
+@media screen and (max-width: 940px) {
+  .items {
+    width: 100%;
+  }
+  .contact {
+    padding: 0;
+  }
+}
+.contact-items{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bg-dark {
+  background-color: #1d1e25;
+  display: flow-root;
+}
+.footer-cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap-reverse;
+}
+@media screen and (max-width: 560px) {
+  .footer-cont {
+    gap: 35px;
+  }
+}
+.footer-items {
+  display: grid;
+  gap: 10px;
+  color: white;
+}
+@media screen and (max-width: 560px) {
+  .footer-items {
+    width: 100%;
+  }
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 75px;
+}
+.grid > p {
+  color: #707070;
+}
+.grid-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  grid-auto-flow: dense;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 540px) {
+  .grid-cont {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+.grid-img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.grid-img-cont {
+  height: 500px;
+}
+.bottom {
+  margin-bottom: 1rem;
 }

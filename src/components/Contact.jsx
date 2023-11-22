@@ -1,16 +1,12 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 import { FaPhone } from "react-icons/fa6";
-import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   return (
-    <>
-      <Helmet>
-        <title>Twin Baby Spa - İletişim</title>
-      </Helmet>
-      <section className="container top">
-        <h2 className="title">İletişim</h2>
+    <section className="bg-green line-top">
+      <div className="container top">
+        <h2 className="title white">İletişim</h2>
         <div className="contact">
           <div className="items">
             <iframe
@@ -23,22 +19,22 @@ export default function Contact() {
             ></iframe>
           </div>
           <div className="items contact-items">
-            <h3 className="">
+            <h3 className="white">
               <FaLocationDot /> Adres
             </h3>
-            <p className="">
+            <p className="white">
               Şirinyalı mah. 1542 Sk. No:3 Hagel apt. Kat:1 Daire:4
               Muratpaşa/Antalya
             </p>
 
-            <h3 className="">
+            <h3 className="white">
               <FaPhone /> Telefon
             </h3>
             <a href="tel:+905435679470" rel="noreferrer">
-              <p className="">+90 543 567 94 70</p>
+              <p className="white">+90 543 567 94 70</p>
             </a>
 
-            <h3 className="">
+            <h3 className="white">
               <TbMailFilled /> E-posta
             </h3>
             <a
@@ -46,11 +42,11 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <p className="">info@twinbabyspa.com</p>
+              <p className="white">info@twinbabyspa.com</p>
             </a>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

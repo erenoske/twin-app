@@ -16,6 +16,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import IntroductionSection from "../components/IntroductionSection.jsx";
 import Gallery from "../components/Gallery.jsx";
 import Faq from "../components/Faq.jsx";
+import Contact from "../components/Contact.jsx";
 
 export default function Home() {
   const breakpoints = {
@@ -59,6 +60,7 @@ export default function Home() {
       <IntroductionSection />
       <Gallery />
       <Faq />
+      <Contact />
     </>
   );
 }

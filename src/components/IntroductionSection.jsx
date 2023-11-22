@@ -2,7 +2,7 @@ import img from "../assets/bg-2-rb.png";
 
 export default function Promotion() {
   return (
-    <section className="bg-green line">
+    <section className="bg-green line-top line-bottom">
       <div className="container top">
         <div className="intro-section">
           <div className="f-item">

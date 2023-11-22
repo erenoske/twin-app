@@ -30,17 +30,17 @@ export default function Header() {
     };
 
     // Scroll olayını dinle
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Temizleme fonksiyonu, komponent unmount olduğunda event listener'ı kaldırır
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
     <>
       <div className="main-screen">
-        <header className={`navbar-header ${isScrolled ? 'active' : ''}`}>
+        <header className={`navbar-header ${isScrolled ? "active" : ""}`}>
           <Link to="/">
             <div className="logo-box">
               <img src={isScrolled ? fVLogo : fLogo} alt="" />
@@ -48,10 +48,10 @@ export default function Header() {
             </div>
           </Link>
           <nav className="navbar-links">
-            <Link to="/Hakkimizda" className="site-links">
+            <Link to="/hakkimizda" className="site-links">
               Hakkımızda
             </Link>
-            <Link to="/about" className="site-links">
+            <Link to="/hizmetlerimiz" className="site-links">
               Hizmetlerimiz
             </Link>
             <Link to="/galeri" className="site-links">
@@ -74,10 +74,10 @@ export default function Header() {
           <Link to="/" className="site-links" onClick={handleNav}>
             Ana Sayfa
           </Link>
-          <Link to="/Hakkimizda" className="site-links" onClick={handleNav}>
+          <Link to="/hakkimizda" className="site-links" onClick={handleNav}>
             Hakkımızda
           </Link>
-          <Link to="/about" className="site-links" onClick={handleNav}>
+          <Link to="/hizmetlerimiz" className="site-links" onClick={handleNav}>
             Hizmetlerimiz
           </Link>
           <Link to="/galeri" className="site-links" onClick={handleNav}>
